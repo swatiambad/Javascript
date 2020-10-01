@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>CRUD Application</title>
+</head>
+
+<style>
+	*{
+		margin: 0px;
+		padding: 0px;
+
+	}
+	.data{
+		
+		height: 500px;
+		width: 80%;
+		margin-left: 10%;
+		margin-top: 50px;
+		background-color: lightgray;
+		padding: 20px;
+		display: inline-block;
+
+	}
+	.table{
+		width: 100%;
+		margin-top: 20px;
+		font-family: "calibri";
+	}
+	th,td{
+		height: 40px;
+		text-align: center;
+		padding: 5px;
+	}
+	input{
+		height: 40px;
+		text-indent: 20px;
+	}
+	button{
+		padding: 10px;
+	}
+	.form{
+		margin-top: 20px;
+	}
+
+	.modal{
+	height: 100vh;
+	width: 100%;
+	background-color: rgba(0,0,0,0.5);
+	position: fixed;
+	display: none;
+
+}
+.modalchild{
+	height: 200px;
+	width: 70%;
+	background-color: white;
+	margin-left: 15%;
+	margin-top: 100px;
+	display: inline-block;
+	padding: 30px;
+
+}
+
+
+</style>
+<body>
+	<div class="modal" onclick="hidemodal(event)">
+	<div class="modalchild">
+		
+
+		<div class="form" onsubmit="updateSuperhero(event)">
+		<form>
+		<input type="text" required placeholder="Name" id="upname">
+         <input type="number" required placeholder="Age"id="upage">
+          <input type="text" required placeholder="Planet"id="upplanet">
+         <input type="text" required placeholder="Height"id="upheight">
+          <button type="submit" >Update</button>
+
+ 
+
+</form>
+	</div>
+	</div>
+
+
+</div>
+<div class="data">
+
+
+	<h1>SuperHero</h1>
+	<div class="form" onsubmit="addsuperhero(event)">
+		<form>
+		<input type="text" required placeholder="Name" id="name">
+         <input type="number" required placeholder="Age"id="age">
+          <input type="text" required placeholder="Planet"id="planet">
+         <input type="text" required placeholder="Height"id="height">
+
+        
+<button type="submit" >Add SuperHero</button>
+
+ <div class="form">
+         	<input type="text" name="search" placeholder="search by Here" id="searchname" onkeyup="searchbyname()">
+         </div>
+
+</form>
+	</div>
+	<table border="1" class="table" cellspacing="0">
+		<thead>
+			<tr>
+				<th>Sr.No</th>
+			   <th>Name</th>
+				<th>Age</th>
+				<th>planet</th>
+				<th>Height</th>
+                <th>Action</th>
+
+			</tr>
+
+		</thead>
+
+		<tbody class="tdata" id="tdata">
+			
+		</tbody>
+<script type="text/javascript" src="project.js"></script>
+
+
+	</table>
+
+</div>
+
+
+</body>
+</html>
