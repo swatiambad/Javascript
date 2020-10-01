@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<style>
+	*{
+		margin:0px;
+		padding: 0px;
+
+	}
+	.header{
+		height: 70px;
+		width: 100%;
+		background-color: lightgrey;
+		line-height: 70px;
+	}
+	h1{
+		vertical-align: top;
+		margin-left: 5%;
+		display: inline-block;
+		width: 30%;
+
+	}
+	.search{
+		height: 70px;
+		width: 60%;
+		/*background-color: red;*/
+		display: inline-block;
+	}
+	.search input{
+		height: 40px;
+		width: 100%;
+		text-indent: 20px; 
+		border-radius: 20px;
+		border: 1px solid grey;
+		outline: none;
+
+	}
+	.products{
+		width: 100%;
+		height: auto;
+		/*background-color: grey;*/
+	}
+	.productwrapper{
+          height: auto;
+          width: 80%;
+         /* background-color: green;*/
+          margin-left: 10%;
+          margin-bottom: 50px;
+
+	}
+	.product{
+		height: auto;
+		width: 22%;
+		/*background-color: red;*/
+		display: inline-block;
+		margin-top: 25px;
+		margin-left: 6.25%;
+		border: 1px solid lightgrey;
+	}
+	.prodimg{
+		height: 300px;
+		width: 100%;
+		background-color: yellow;
+		overflow: hidden;
+	}
+	.product h3,.product p{
+		padding: 5px;
+		padding-left: 10px;
+	}
+	.product p{
+		color: gray;
+	}
+	button{
+		padding: 10px;
+	}
+</style>
+<body>
+	<div class="header">
+		<h1>Shopping 360</h1>
+		<div class="search">
+			<input type="text" name="search" id="searchvalue" onkeyup="searchproduct(this.value)" placeholder="search by here">
+		</div>
+	</div>
+	<div class="products">
+		<div class="productwrapper" id="productwrapper">
+			<!-- <div class="product">
+				<div class="prodimg">
+					<img src="product_images/men1.jpg"  width="100%" />
+				</div>
+				<h3> White Format Shirt</h3>
+				<p>Price: 30$</p>
+				<p>Color: white$</p>
+                <p>Size: L</p>
+                <p>Just Like That</p>
+                <p>
+                	<button>Add to Cart</button>
+                </p>
+			</div>  -->
+			 
+		</div>
+		
+	</div>
+	<div class="products">
+		<h2>Cart</h2>
+		<div class="productwrapper" id="cart">
+			
+			 
+		</div>
+		
+	</div>
+	
+<script type="text/javascript" src="shopping.js"></script>
+</body>
+</html>
